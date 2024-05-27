@@ -1,0 +1,144 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Header from '~/components/widgets/Header.astro';
+import Content from '~/components/widgets/Content.astro';
+import { headerData } from '~/navigation';
+
+
+
+const metadata = {
+  title: 'Courses Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      isSticky
+    />
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Our courses"
+    subtitle="Discover courses that's fit to you!"
+    isReversed
+    items={[
+      {
+        title: 'Details',
+        description:
+          'A cybersecurity course introduces the importance and basics of cybersecurity, covering various cyber threats like malware and phishing. It explores network security principles, including firewalls and VPNs, and teaches cryptographic methods for data protection.',
+      },
+      {
+        title: 'Benefits:',
+        description: `
+A cybersecurity course provides expertise in a high-demand field, ensuring job security and competitive salaries. It opens up diverse career opportunities, including roles in ethical hacking, security analysis, and incident response.`,
+      },
+    ]}
+    image={{ src: '~/assets/images/flyd-C5pXRFEjq3w-unsplash.jpg', alt: 'Cyber Security Image' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Cyber security course: <br /><span class="text-2xl">Here's our course detail</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Details',
+        description: `This blockchain course introduces the fundamentals and history of the technology, including essential cryptography concepts like hashing and digital signatures. It covers blockchain architecture, focusing on blocks and nodes, and explores consensus mechanisms such as Proof of Work and Proof of Stake.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `A blockchain course equips you with in-demand skills that enhance career prospects. It offers a deep understanding of blockchain technology and its applications, leading to better job opportunities and career advancement in various fields.`,
+      },
+    ]}
+     image={{ src: '~/assets/images/shubham-dhage-T9rKvI3N0NM-unsplash (1).jpg', alt: 'Blockchain Image' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Blockchain course: <br /><span class="text-2xl">Here's our course detail</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Details',
+        description: `A Web 3 course introduces the shift from Web 2.0 to Web 3.0 and the principles of decentralized web technologies. It covers blockchain fundamentals, including its architecture and functioning, and teaches smart contract development and their applications in decentralized apps.`,
+      },
+      {
+        title: 'Benefits:',
+        description: `A Web 3 course provides cutting-edge knowledge in decentralized web technologies, meeting the high demand for skills in this rapidly growing field. It opens up innovative career opportunities in blockchain, decentralized finance (DeFi), and decentralized applications (dApps).`,
+      },
+    ]}
+   image={{ src: '~/assets/images/shamin-haky-Uhx-gHPpCDg-unsplash.jpg', alt: 'Blockchain Image' }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Web 3 course: <br /><span class="text-2xl">Here's our course detail</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+   <!-- Testimonials Widget *********** -->
+
+   <Testimonials
+   title="What our student say?"
+   testimonials={[
+     {
+       testimonial: `Cyberhouse has been a game-changer for my understanding of blockchain and AI. The courses are well-structured and easy to follow, with expert instructors who break down complex concepts into manageable lessons.`,
+       name: 'Lisa Kennedy',
+       job: 'Blockchain developer',
+       image: {
+         src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+         alt: 'Lisa Kennedy Image',
+       },
+     },
+     {
+       testimonial: `Thanks to Cyberhouse, I've gained a strong understanding of Web3 and blockchain. The instructors, both knowledgeable and passionate about teaching, greatly enhanced my learning experience.`,
+       name: 'Josh Wilkinson',
+       job: 'Web 3 Enthusiast',
+       image: {
+         src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+         alt: 'Josh Wilkinson Image',
+       },
+     },
+     {
+       testimonial:
+         'Cyberhouse courses on AI and Blockchain have been invaluable to my professional development. The material is in-depth yet accessible and the instructors are top-tier professionals who make the subjects understandable and interesting.',
+       name: 'Sidney Hal',
+       job: 'AI Enginerr',
+       image: {
+         src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+         alt: 'Sidney Hal Image',
+       },
+     },
+   ]}
+
+/>

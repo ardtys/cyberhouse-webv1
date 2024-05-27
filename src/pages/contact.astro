@@ -1,0 +1,38 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's Connect!" />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We are here to help!"
+    items={[
+      {
+        title: 'Instagram',
+        description: 'cyberhouse.id',
+        icon: 'tabler:brand-instagram',
+      },
+      {
+        title: 'Email',
+        description: 'workcyberhouse@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Location',
+        description: 'Jakarta,Indonesia',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

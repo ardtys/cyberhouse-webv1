@@ -1,0 +1,51 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+
+
+
+const metadata = {
+  title: 'Consultant Page',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="What services do we provide?"
+    subtitle="We offer a wide range of website templates that suit various industries and purposes such as business, portfolio, e-commerce, blog, etc."
+    items={[
+      {
+        title: 'Maintenance Services',
+        description:
+          'We offer comprehensive maintenance services for your digital assets, including website upkeep, cybersecurity management, and blockchain system maintenance. Our dedicated team ensures the security, functionality, and performance of your assets, providing peace of mind for your digital operations.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Consultation Services',
+        description:
+          'We provide expert consultation services in cybersecurity, blockchain, and Web 3 technologies. Our skilled consultants offer tailored advice to navigate these complex fields, assisting with cybersecurity measures, blockchain understanding, and exploring Web 3 potentials.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Technical Support',
+        description:
+          'Providing customer support for any technical issues related to the services or their implementation.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+
+
+  
+  
+    
+</Layout>

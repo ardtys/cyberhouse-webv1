@@ -1,0 +1,167 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Cyber House',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <div class="animate-fadeIn">
+    <Hero
+      actions={[
+        {
+          variant: 'primary',
+          text: 'Get know about us',
+          href: 'https://www.instagram.com/cyberhouse.id/',
+          target: '',
+        },
+        { text: 'Learn more', href: '#features' },
+      ]}
+      image={{ src: '~/assets/images/—Pngtree—flat style cyber security infographic_5000065 (1).png', alt: 'Cyber Security Image' }}
+    >
+      <Fragment slot="title">
+        <span class="hidden xl:inline"></span>
+        <span class="text-accent dark:text-white highlight"> Biggest Cyber Security & Tech Community</span>
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        <span class="hidden sm:inline">
+          <span class="font-semibold"></span> We are an EdTech startup focused on cybersecurity education, blockchain, and Web 3 technologies. Our mission is to empower individuals and organizations with the knowledge and skills needed for digital security and decentralized technologies.</span
+        >
+      </Fragment>
+    </Hero>
+  </div>
+
+  <!-- Note Widget ******************* -->
+  <div class="animate-fadeIn">
+    <Note />
+  </div>
+
+  <!-- Features Widget *************** -->
+  <div class="animate-fadeIn">
+    <Features
+      id="features"
+      tagline="Features"
+      title="What you get with Cyber House"
+      subtitle="One of the most professional and comprehensive edutech in Indonesia"
+      items={[
+        {
+          title: 'Innovative Learning Environment',
+          description:
+            'Gain hands-on experience with Cyber House, understanding its applications and potential in various industries.',
+          icon: 'tabler:brand-tailwind',
+        },
+        {
+          title: 'Community and Networking',
+          description:
+            'Network with professionals, industry leaders, and potential employers through events, workshops, and online forums.',
+          icon: 'tabler:components',
+        },
+        {
+          title: 'Hands-On Projects and Real-World Experience',
+          description:
+            'Engage in practical, project-based learning that simulates real-world scenarios.',
+          icon: 'tabler:list-check',
+        },
+        {
+          title: 'Career Advancement Opportunities',
+          description:
+            'Stay updated with the latest industry trends and opportunities in the rapidly evolving tech landscape.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Flexible Learning Options:',
+          description:
+            "Learn at your own pace with flexible scheduling options that fit your lifestyle.",
+          icon: 'tabler:arrows-right-left',
+        },
+        {
+          title: 'Open to new ideas and contributions',
+          description:
+            'Embracing a culture that is open to new ideas and contributions is integral fostering innovation,and collaboration.',
+          icon: 'tabler:bulb',
+        },
+      ]}
+    />
+  </div>
+
+
+  <div class="animate-fadeIn">
+    <FAQs
+      title="Frequently Asked Questions"
+      subtitle="Dive into the following questions to gain insights."
+      tagline="FAQs"
+      classes={{ container: 'max-w-6xl' }}
+      items={[
+        {
+          title: 'Why Cyber House?',
+          description:
+            "Cyberhouse specializes in the latest advancements in cybersecurity, blockchain, and Web 3 technologies. Our comprehensive training programs are designed by industry experts to ensure you gain the most relevant and up-to-date knowledge and skills.",
+        },
+        {
+          title: 'Why I need to start in Cyber House?',
+          description:
+            'Our courses are designed and taught by industry experts with extensive experience in their respective fields. This means you receive high-quality education and practical insights that are directly applicable to real-world scenarios.',
+        },
+        {
+          title: ' Do I need programming experience to take your courses?',
+          description:
+            "No, many of our courses are designed for beginners and do not require prior programming experience. We provide foundational courses that cover basic concepts and gradually introduce more complex topics.",
+        },
+        {
+          title: "What sets Cyberhouse apart from other courses?",
+          description:
+            "Cyberhouse is uniquely focused on the intersection of cybersecurity, blockchain, and Web 3 technologies. While many other platforms offer broad tech courses, Cyberhouse specializes in these critical and emerging fields, ensuring that our curriculum is deeply tailored to the needs and trends of these industries.",
+        },
+        {
+          title: ' Do you offer career support?',
+          description:
+            "Yes, we provide career support services such as career counseling, job placement assistance, and professional networking opportunities to help you advance in your career.",
+        },
+        {
+          title: 'What are the technical requirements for taking a course?',
+          description:
+            "You will need a reliable computer and internet connection. Some courses may require specific software or tools, which will be listed in the course requirements.",
+        },
+      ]}
+    />
+  </div>
+
+  <Fragment slot="title">
+    Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+    waste more time! :P
+  </Fragment>
+</Layout>
+
+<style>
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .animate-fadeIn.stats {
+    animation-delay: 1s; /* Add a delay for the Stats section */
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

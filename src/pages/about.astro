@@ -1,0 +1,64 @@
+---
+
+import Hero from '~/components/widgets/Hero.astro';
+
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{ src: '~/assets/images/Screenshot 2024-05-22 224816.jpg', alt: 'Cyber Security Image' }}
+  >
+    <Fragment slot="title">
+      This is our team!<br />
+      <span class="text-accent dark:text-white highlight"> </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+    </Fragment>
+  </Hero>
+
+  
+
+  <!-- Features3 Widget ************** -->
+
+  <!-- Features3 Widget ************** -->
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our values"
+    subtitle="Cyberhouse is a pioneering edutech startup focused on empowering individuals and organizations through state-of-the-art technology education and consulting services. Central to Cyberhouse are several core values."
+    items={[
+      {
+        title: 'Quality Education',
+        description:
+          'Dedicated to excellence, Cyberhouse provides high-quality, comprehensive educational programs. Each course is carefully crafted by industry experts to offer practical, hands-on learning experiences that apply to real-world scenarios.',
+      },
+      {
+        title: 'Community Building',
+        description:
+          'Cyberhouse cultivates a dynamic community of learners and professionals. By promoting collaboration, networking, and knowledge sharing, it creates an environment where individuals can grow together, support each other, and collectively enhance their understanding of blockchain, AI, and Web 3 technologies.',
+      },
+      {
+        title: 'Lifelong Learning',
+        description:
+          'Cyberhouse advocates for lifelong learning, encouraging continuous education and skill development. By providing ongoing support and advanced courses, the startup helps individuals stay ahead in their careers and adapt to the constantly evolving technological landscape.',
+      },
+    ]}
+  />
+
+  <!-- 
+
+  <!-- Features2 Widget ************** -->
+
+
+  <!-- Features2 Widget ************** -->
+</Layout>
